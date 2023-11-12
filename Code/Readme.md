@@ -1,36 +1,44 @@
 # Data Query Process
 
-This data query process involves loading and exploring a dataset related to credit card transactions, with a focus on identifying fraudulent activities. The dataset is split into training and testing sets. The initial steps include basic data exploration to understand the dataset's structure, summary statistics, and information about data types and missing values.
+This data query process involves loading, exploring, and preprocessing a dataset containing credit card transactions. The dataset is split into training and testing sets (train.csv and test.csv). The process begins with basic data exploration, including viewing the first few rows and summarizing the data using descriptive statistics and data types. We then check for and handle missing values in specific columns (V21 to V28, Amount, and Class) by replacing them with the median (for continuous variables) or mode (for categorical variables).
 
-Subsequently, missing values in specific columns (V21 to V28, and Amount) are replaced with their median values, and for the 'Class' column, the mode is used. This ensures data integrity for further analysis. The process also involves identifying the number of fraudulent transactions in the training set.
+Next, we analyze the number of fraudulent transactions in the dataset. To understand the distribution of each numeric feature, Kernel Density Estimation (KDE) plots are generated for both the training and test datasets. These plots provide insights into the distribution of each feature and highlight differences between the two datasets.
 
-Further, the script visualizes the distribution of numeric columns in both training and test datasets using Kernel Density Estimation (KDE) plots. This helps in understanding the distribution and overlap of features across the datasets. Additionally, a correlation matrix is generated to identify highly correlated features, and a joint plot for specific features (V17 and V12) is created, colored by the 'Class' to observe their relationship in the context of fraud detection.
+Finally, we examine correlations between features using a heatmap and create a joint plot for specific variables (V17 and V12) to observe their relationship and distribution across different classes.
 
 # Pseudo-Code for Data Query Process
 
-1. Import the required libraries (pandas, numpy, matplotlib.pyplot, seaborn).
+1. **Import Libraries**
+   - Import pandas, numpy, matplotlib.pyplot, seaborn.
 
-2. Load the 'train.csv' and 'test.csv' files into pandas DataFrames named 'train' and 'test', respectively.
+2. **Load Data**
+   - Load 'train.csv' into a DataFrame named 'train'.
+   - Load 'test.csv' into a DataFrame named 'test'.
 
-3. Perform basic data exploration on the 'train' DataFrame:
-   a. Display the first few rows.
-   b. Generate summary statistics.
-   c. Display information about data types and non-null counts.
+3. **Basic Data Exploration**
+   - Display the first few rows of 'train' using `train.head()`.
+   - Summarize the dataset using `train.describe()`.
+   - Display data types and information using `train.info()`.
 
-4. Check and handle missing values:
-   a. For each column from 'V21' to 'V28', and 'Amount' in 'train':
-      - Replace missing values with the median of the column.
-   b. For the 'Class' column in 'train':
-      - Replace missing values with the mode of the column.
+4. **Check for Missing Values**
+   - Check for missing values in 'train' using `train.isnull().sum()`.
 
-5. Confirm that all missing values have been addressed.
+5. **Handle Missing Values**
+   - Replace missing values in columns V21 to V28 and 'Amount' with the median.
+   - Replace missing value in 'Class' with the mode.
+   - Verify that all missing values are handled.
 
-6. Calculate and print the number of fraudulent transactions in 'train'.
+6. **Fraudulent Transactions Analysis**
+   - Calculate the number of fraudulent transactions.
+   - Display the number of fraudulent transactions.
 
-7. Visualize the distribution of numeric columns:
-   a. For each numeric column from 'Time' to 'Amount':
-      - Create Kernel Density Estimation (KDE) plots for both 'train' and 'test'.
+7. **Feature Distribution Visualization**
+   - Identify numeric columns for visualization.
+   - Generate Kernel Density Estimation (KDE) plots for each numeric feature.
+   - Compare distributions in training and test datasets using KDE plots.
 
-8. Generate a correlation matrix for 'train' and visualize it using a heatmap.
+8. **Correlation Analysis**
+   - Create a heatmap to visualize correlations between features.
 
-9. Create a joint plot for 'V17' and 'V12' in 'train', colored by 'Class'.
+9. **Joint Plot for Specific Variables**
+   - Generate a joint plot for variables V17 and V12 to observe their relationship across different classes.
