@@ -40,7 +40,7 @@ A current and significant research question in XAI is: "How can Large Language M
 The integration of machine learning (ML) models in financial services, particularly in the classification of loan borrowers, marks a significant advancement in credit risk assessment. However, the opacity of these ML models, often described as "black boxes," raises critical concerns regarding their interpretability and transparency (Guidotti et al., 2018). The increasing demand for explainable AI (XAI) in regulatory and societal contexts underscores the need for effective post hoc explanation methods that clarify the decision-making processes of ML models (Arrieta et al., 2020). The advent of Large Language Models (LLMs) and their capability for in-context learning (ICL) presents a novel approach to generating such explanations (Liu et al., 2023). This study aims to explore the potential of LLMs in providing post hoc explanations within the framework of loan borrower classification in banking.
 
 #### Research Question
-- Can LLMs produce accurate and reliable post hoc explanations for ML model predictions in loan borrower classification?
+- Can LLMs produce accurate and reliable post hoc explanations for ML model predictions in credit card fraud classification?
 - How do LLMs compare with existing post hoc explanation methods in identifying key features influencing classification decisions?
 
 #### Application Scenarios
@@ -48,7 +48,7 @@ The integration of machine learning (ML) models in financial services, particula
 - **Regulatory Compliance:** LLMs' ability to provide transparent explanations is vital for meeting compliance standards.
 
 #### Methodology
-- **Data Collection:** Utilizing the Kaggle dataset on credit classification (Kapturov, 2022), the study will involve extensive preprocessing.
+- **Data Collection:** Utilizing the Kaggle dataset on credit card fraud classification (Walter et al., 2023), the study will involve extensive preprocessing.
 - **Model Training:** Employing Logistic Regression, SVM, and Random Forests, the study will establish baseline classifiers.
 - **Explanation Generation:** LLMs, specifically GPT-3.5 and GPT-4, will be utilized for generating post hoc explanations.
 - **Evaluation:** The study will assess the explanations using metrics like Feature Agreement (FA) and Rank Agreement (RA).
@@ -66,7 +66,8 @@ The integration of machine learning (ML) models in financial services, particula
 ## References
 - Arrieta, A. B., Díaz-Rodríguez, N., Del Ser, J., Bennetot, A., Tabik, S., Barbado, A., ...& Herrera, F. (2020). Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. Information fusion, 58, 82-115.
 - Guidotti, R., Monreale, A., Ruggieri, S., Turini, F., Giannotti, F., & Pedreschi, D. (2018). A survey of methods for explaining black box models. ACM computing surveys (CSUR), 51(5), 1-42.
-- Kapturov, A. (2022). Credit Classification for Banks [Data set]. Kaggle. https://www.kaggle.com/datasets/kapturovalexander/credit-classification-for-banks/data
+- Walter Reade, Ashley Chow. (2023). Binary Classification with a Tabular Credit	Card Fraud Dataset. Kaggle. https://kaggle.com/competitions/playground-series-s3e4
+
 - Kroeger, N., Ley, D., Krishna, S., Agarwal, C., & Lakkaraju, H. (2023). Are Large Language Models Post Hoc Explainers?. arXiv preprint arXiv:2310.05797.
 - Liu, P., Yuan, W., Fu, J., Jiang, Z., Hayashi, H., & Neubig, G. (2023). Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. ACM Computing Surveys, 55(9), 1-35.
 
