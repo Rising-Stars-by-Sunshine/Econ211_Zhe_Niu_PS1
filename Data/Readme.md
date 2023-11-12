@@ -14,3 +14,8 @@ The data features are primarily numerical, derived from a Principal Component An
 | Amount   | Transaction amount. This feature can be used for example-dependent cost-sensitive learning. | Numerical | Continuous |
 | Class    | Indicates fraud (1) or non-fraudulent (0) transactions. | Categorical | 0 (Non-Fraud), 1 (Fraud) |
 
+# Flowchart of Dataset Structure
+![Dataset Structure](Dataset_Structure.png)
+
+## Reference
+- Walter Reade, Ashley Chow. (2023). Binary Classification with a Tabular Credit	Card Fraud Dataset. Kaggle. https://kaggle.com/competitions/playground-series-s3e4
