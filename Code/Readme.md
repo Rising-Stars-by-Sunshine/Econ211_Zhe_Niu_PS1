@@ -42,3 +42,6 @@ Finally, we examine correlations between features using a heatmap and create a j
 
 9. **Joint Plot for Specific Variables**
    - Generate a joint plot for variables V17 and V12 to observe their relationship across different classes.
+
+# Flowchart for Data Query Process
+![Data Query](Data_Query.png)
