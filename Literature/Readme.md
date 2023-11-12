@@ -1,5 +1,3 @@
-# Research on Explainable AI (XAI) and Large Language Models (LLMs)
-
 ## Question 1
 
 ### Definition of XAI
